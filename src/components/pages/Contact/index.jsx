@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { Form, Button, Container, Row, Stack } from 'react-bootstrap';
 import { Header } from '../../shared/styles';
+import axios from 'axios';
 
 class Contact extends Component {
   constructor(){
@@ -20,7 +21,20 @@ class Contact extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    this.sendResponse(this.state)
+    const {fullName, email, phoneNumber, comments} = this.state;
+    const data = {
+      'entry.1080699787': fullName,
+      'entry.786181199': email,
+      'entry.272823': phoneNumber,
+      'entry.928903815': comments,
+    }
+    const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdEp8TW5dhmiO-soN91oIxkgUB7QQv5ndOxxIwF6ffG1Np9lw/formResponse'
+    const queryString = require('query-string')
+    const q = queryString.stringifyUrl({
+      url: formUrl,
+      query: data
+    })
+    this.sendRequest(q)
     this.setState({    
       fullName: '',
       email: '',
@@ -28,8 +42,15 @@ class Contact extends Component {
       comments: '',})
   }
 
-  sendResponse = (formInfo) =>{
-    console.log(formInfo)
+  sendRequest = async (url) =>{
+    let response;
+    try {
+      response =  await axios.post(url,null,null)
+    } catch (e) {
+      response = await e
+    }
+    console.log("Due to CORS, an error message will occur here. Don't worry. The form is working!")
+    console.log(response)
   }
 
   render(){
