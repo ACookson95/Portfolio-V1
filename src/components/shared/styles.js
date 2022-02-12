@@ -7,6 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100%;
   text-align: center;
+  padding: 50px;
 `;
 
 export const Header = styled.div`
@@ -18,6 +19,8 @@ export const Header = styled.div`
   color: darkgray; 
   font-style: italic;  
   text-align: center;
-  padding: 20px 40px;
+  padding: 10px 20px;
+  border-top: 2px solid darkgray;
   border-bottom: 2px solid darkgray;
+  margin: 20px 0;
 `;

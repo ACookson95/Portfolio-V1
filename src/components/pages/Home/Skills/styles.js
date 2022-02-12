@@ -18,7 +18,7 @@ export const SkillsWrapper = styled.div`
 export const SkillsRow = styled.div`
   display: flex;
   justify-content: space-around;
-  padding: 10px;
+  padding: 5px;
   width: 80%;
   max-width: 1000px;
   @media (max-width: 900px){
@@ -32,7 +32,7 @@ export const Skill = styled.div`
   flex-direction: column;
 
   & > div {
-    padding: 15px;
+    padding: 10px;
     margin: 10px
   }
 
