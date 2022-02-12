@@ -1,7 +1,9 @@
+import { Header } from "../../../shared/styles";
+
 const Hobbies = () => {
   return(
     <>
-      <h1>Hobbies Section</h1>
+      <Header>Hobbies Section</Header>
     </>
   )
 };

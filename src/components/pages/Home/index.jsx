@@ -3,19 +3,17 @@ import About from './About';
 import Skills from './Skills';
 import Projects from './Projects';
 import Hobbies from './Hobbies';
-import Footer from './Footer';
+import { Container } from './styles';
 
 const Home = () => {
   return(
-    <>
-      <h1>Home Section</h1>
+    <Container>
       <Cover />
       <About />
       <Skills />
       <Projects />
       <Hobbies />
-      <Footer />
-    </>
+    </Container>
   )
 };
 
