@@ -8,7 +8,7 @@ export const Container = styled.div`
   top: 0;
   padding-top: calc(1em + env(safe-area-inset-bottom));
   padding-bottom: calc(1em + env(safe-area-inset-bottom));
-  background-color: black;
+  background-color: #000000;
 `;
 
 export const SidebarWrapper = styled.div`
@@ -33,7 +33,7 @@ export const LinkWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #F4F4F4;
     font-size: 25px;
     transition: all 0.25s ease-in-out;
     padding: 5px;
@@ -45,7 +45,7 @@ export const LinkWrapper = styled.div`
 
   & a:hover{
     transform: scale(1.25);
-    color: #eb6a00;
+    color: #A0BFAE;
   }
 
   & p {
@@ -69,7 +69,7 @@ export const SocialWrapper = styled.div`
 export const MenuButton = styled.div`
   padding: 10px;
   cursor: pointer;
-  color: white;
+  color: #F4F4F4;
   width: 80px;
   & svg {
     width: 100%;
@@ -77,7 +77,7 @@ export const MenuButton = styled.div`
   }
   & svg:hover {
     transform: scale(1.25);
-    color: #eb6a00;
+    color: #A0BFAE;
   }
 `;
 
@@ -89,10 +89,10 @@ export const CollapsedSocial = styled.div`
   width: 100%;
   padding: 5px;
   cursor: pointer;
-  color: white;
+  color: #F4F4F4;
   & svg:hover{
     transform: scale(1.25);
-    color: #eb6a00;
+    color: #A0BFAE;
   }
   & svg {
     width: 30px;
@@ -107,7 +107,7 @@ export const Popout = styled.div`
   & > div {
     visibility: ${props => props.show ? 'visible' : 'hidden'}; 
     width: 280px;
-    background-color: black;
+    background-color: #192D3F;
     border-radius: 5px;
     padding: 10px;
     position: absolute;

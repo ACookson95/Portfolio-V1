@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const SkillsWrapper = styled.div`
-  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;

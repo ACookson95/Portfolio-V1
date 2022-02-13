@@ -15,7 +15,7 @@ const Cover = () => {
   ]
   return(
     <>
-      <Style.CarouselWrapper>
+      <Style.CarouselWrapper id='home'>
         <Carousel photos={carouselPhotos}/>
       </Style.CarouselWrapper>
     </>

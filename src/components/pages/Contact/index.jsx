@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { Form, Button, Container, Row, Stack } from 'react-bootstrap';
+import { Form, Button, Container, Stack } from 'react-bootstrap';
 import { Header } from '../../shared/styles';
 import axios from 'axios';
 
@@ -55,9 +55,9 @@ class Contact extends Component {
 
   render(){
     return(
-      <Container>
+      <Container className='mb-3'>
         <Stack gap={1}>
-          <Header>CONTACT ME</Header>
+          <Header>Contact Me</Header>
           <h3>Ask me anything!</h3>
           <h3>I'll get back to you via email, text, or whatever works best for you.</h3>
           <Form onSubmit={this.handleSubmit}>

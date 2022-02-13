@@ -11,7 +11,7 @@ import * as Style from './styles';
 
 const Skills = () => {
   return(
-    <Container>
+    <Container id="skills">
       <Header>Skills</Header>
       <Style.SkillsWrapper>
         <Style.SkillsRow>

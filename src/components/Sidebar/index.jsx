@@ -15,6 +15,8 @@ import {
 } from "react-bootstrap-icons";
 import * as Style from "./styles";
 import SocialLinks from './SocialLinks';
+import { HashLink } from 'react-router-hash-link';
+
 
 
 class Sidebar extends Component {
@@ -76,26 +78,26 @@ class Sidebar extends Component {
         }    
           </Style.MenuButton>
             <Style.LinkWrapper flexGrow={1}>
-                <Link to="/#home">
+                <HashLink to="/#home">
                   <HouseFill />
                   <Style.Label sidebarOpen={this.state.sidebarOpen}>Home</Style.Label>
-                </Link>
-                <Link to="/#about">
+                </HashLink>
+                <HashLink to="/#about">
                   <FilePersonFill />
                   <Style.Label sidebarOpen={this.state.sidebarOpen}>About</Style.Label>
-                </Link>
-                <Link to="/#skills">
+                </HashLink>
+                <HashLink to="/#skills">
                   <FileCodeFill />
                   <Style.Label sidebarOpen={this.state.sidebarOpen}>Skills</Style.Label>
-                </Link>
-                <Link to="/#projects">
+                </HashLink>
+                <HashLink to="/#projects">
                   <FolderFill />
                   <Style.Label sidebarOpen={this.state.sidebarOpen}>Projects</Style.Label>
-                </Link>
-                <Link to="/#hobbies">
+                </HashLink>
+                <HashLink to="/#hobbies">
                   <ImageAlt />
                   <Style.Label sidebarOpen={this.state.sidebarOpen}>Hobbies</Style.Label>
-                </Link>
+                </HashLink>
                 <Link to="/resume">
                   <FileTextFill />
                   <Style.Label sidebarOpen={this.state.sidebarOpen}>My Resume</Style.Label>

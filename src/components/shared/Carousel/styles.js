@@ -17,14 +17,14 @@ export const CaresoulButton = styled.div`
   ${props => props.direction}: 0px;
   padding: 10px;
   cursor: pointer;
-  color: white;
+  color: #F4F4F4;
   width: 60px;
   height: 100%;    
   transition: all 0.25s ease-in-out;
   :hover {
     background: rgb(0,0,0);
     background: linear-gradient(${props => props.direction === 'left' ? '270deg' : '90deg'}, rgba(0,0,0,0) 0%, rgba(255,255,255,0.15449929971988796) 100%);
-    color: #eb6a00;
+    color: #A0BFAE;
     & svg{
       transform: scale(1.25);
     }

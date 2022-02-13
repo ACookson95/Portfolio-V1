@@ -27,8 +27,8 @@ const Projects = () => {
   ]
   return(
     <>
-      <Header id='projects'>Projects Section</Header>
       <Container>
+        <Header id='projects'>Projects</Header>
         <Row sm={1} lg={3}>
           {projects.map((project, index) => {
             return (
