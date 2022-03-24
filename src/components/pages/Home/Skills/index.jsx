@@ -11,47 +11,49 @@ import * as Style from './styles';
 
 const Skills = () => {
   return(
-    <Container id="skills">
+    <>
       <Header>Skills</Header>
-      <Style.SkillsWrapper>
-        <Style.SkillsRow>
-          <Style.Skill>
-            <div><img src={ReactIcon} alt='icon' /></div>
-            <p>React</p>
-          </Style.Skill>
-          <Style.Skill>
-            <div><img src={HtmlIcon} alt='icon' /></div>
-            <p>HTML</p>
-          </Style.Skill>
-          <Style.Skill>
-            <div><img src={JsIcon} alt='icon' /></div>
-            <p>Javascript</p>
-          </Style.Skill>
-          <Style.Skill>
-            <div><img src={CssIcon} alt='icon' /></div>
-            <p>CSS</p>
-          </Style.Skill>
-        </Style.SkillsRow>
-        <Style.SkillsRow>
-          <Style.Skill>
-            <div><img src={JiraIcon} alt='icon' /></div>
-            <p>Jira</p>
-          </Style.Skill>
-          <Style.Skill>
-            <div><img src={RubyIcon} alt='icon' /></div>
-            <p>Ruby on Rails</p>
-          </Style.Skill>
-          <Style.Skill>
-            <div><img src={SqlIcon} alt='icon' /></div>
-            <p>SQL</p>
-          </Style.Skill>
-          <Style.Skill>
-            <div><img src={AppsScriptIcon} alt='icon' /></div>
-            <p>Google Apps Script</p>
-          </Style.Skill>
-        </Style.SkillsRow>
-      </Style.SkillsWrapper>
-    </Container>
+      <Container id="skills">
+        <Style.SkillsWrapper>
+          <Style.SkillsRow>
+            <Style.Skill>
+              <div><img src={ReactIcon} alt='icon' /></div>
+              <p>React</p>
+            </Style.Skill>
+            <Style.Skill>
+              <div><img src={HtmlIcon} alt='icon' /></div>
+              <p>HTML</p>
+            </Style.Skill>
+            <Style.Skill>
+              <div><img src={JsIcon} alt='icon' /></div>
+              <p>Javascript</p>
+            </Style.Skill>
+            <Style.Skill>
+              <div><img src={CssIcon} alt='icon' /></div>
+              <p>CSS</p>
+            </Style.Skill>
+          </Style.SkillsRow>
+          <Style.SkillsRow>
+            <Style.Skill>
+              <div><img src={JiraIcon} alt='icon' /></div>
+              <p>Jira</p>
+            </Style.Skill>
+            <Style.Skill>
+              <div><img src={RubyIcon} alt='icon' /></div>
+              <p>Ruby on Rails</p>
+            </Style.Skill>
+            <Style.Skill>
+              <div><img src={SqlIcon} alt='icon' /></div>
+              <p>SQL</p>
+            </Style.Skill>
+            <Style.Skill>
+              <div><img src={AppsScriptIcon} alt='icon' /></div>
+              <p>Google Apps Script</p>
+            </Style.Skill>
+          </Style.SkillsRow>
+        </Style.SkillsWrapper>
+      </Container>
+    </>
   )
 };
 

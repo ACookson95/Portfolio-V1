@@ -12,5 +12,6 @@ export const Container = styled.div`
   justify-content: flex-start;
   scroll-behavior: smooth;
   overflow-y: auto;
+  overflow-x: hidden;
   min-width: 295px;
 `;

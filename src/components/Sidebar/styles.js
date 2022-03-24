@@ -12,7 +12,7 @@ export const Container = styled.div`
 `;
 
 export const SidebarWrapper = styled.div`
-  width: ${props => props.sidebarOpen ? '300px' : '80px' };
+  width: ${props => props.sidebarOpen ? '300px' : '60px' };
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -43,9 +43,19 @@ export const LinkWrapper = styled.div`
     flex-grow: 1;
   }
 
-  & a:hover{
-    transform: scale(1.25);
-    color: #A0BFAE;
+  @media (hover: hover) {
+    & a:hover{
+      transform: scale(1.25);
+      color: #7be9ad;
+    }
+  }
+
+  @media (hover: none) {
+    & a:active{
+      transform: scale(1.25);
+      transition: 0.1s;
+      color: #7be9ad;
+    }
   }
 
   & p {
@@ -70,14 +80,24 @@ export const MenuButton = styled.div`
   padding: 10px;
   cursor: pointer;
   color: #F4F4F4;
-  width: 80px;
+  width: 60px;
   & svg {
     width: 100%;
     height: 100%;
   }
-  & svg:hover {
-    transform: scale(1.25);
-    color: #A0BFAE;
+  @media (hover: hover) {
+    & svg:hover {
+      transform: scale(1.25);
+      color: #7be9ad;
+    }
+  }
+
+  @media (hover: none) {
+    & svg:active{
+      transform: scale(1.25);
+      transition: 0.1s;
+      color: #7be9ad;
+    }
   }
 `;
 
@@ -85,15 +105,28 @@ export const CollapsedSocial = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-grow: 1;
   width: 100%;
   padding: 5px;
   cursor: pointer;
   color: #F4F4F4;
-  & svg:hover{
-    transform: scale(1.25);
-    color: #A0BFAE;
+
+  @media (hover: hover) {
+    & svg:hover{
+      transform: scale(1.25);
+      color: #7be9ad;
+    }
   }
+
+  @media (hover: none) {
+    & svg:active{
+      transform: scale(1.25);
+      transition: 0.1s;
+      color: #7be9ad;
+    }
+  }
+  
   & svg {
     width: 30px;
     height: 30px;

@@ -16,9 +16,9 @@ const App = () => {
       <Container appHeight={window.height}>
         <Sidebar/>   
         <Routes>
-          <Route exact path='/' element={<Home />}/>
-          <Route path='/contact' element={<Contact />}/>
-          <Route path='/resume' element={<Resume />}/>
+          <Route exact path='/portfolio/' element={<Home />}/>
+          <Route path='/portfolio/contact' element={<Contact />}/>
+          <Route path='/portfolio/resume' element={<Resume />}/>
         </Routes>
       </Container>
     </>

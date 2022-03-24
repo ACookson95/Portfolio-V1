@@ -1,43 +1,27 @@
-import { Header } from "../../../shared/styles";
-import { Container } from "../../../shared/styles";
+import { Container, Header, StyledCard } from "../../../shared/styles";
 import Carousel from '../../../shared/Carousel/Carousel';
-import { ListGroup } from 'react-bootstrap';
+import { ListGroup, Card, Row, Col, Stack } from 'react-bootstrap';
 import * as Style from './styles';
 
 const Hobbies = () => {
   const photos = [
-    {url: "https://drive.google.com/uc?export=view&id=1Wvoslvrp2PnDS_zTo3FoYffMzRAmHjto"},
-    {url: "https://drive.google.com/uc?export=view&id=1tb-6d5-y2U9jq3eV37oXpPF43DC9ZDMz"},
-    {url: "https://drive.google.com/uc?export=view&id=1hFA1KKMxw3ErcOVrgdpAW0v5caINBmwQ"},
-    {url: "https://drive.google.com/uc?export=view&id=1oMtkPZ-Rh2G05KHY-L8nDoWwEnZ3YNKI"}
+    {title: "Skiing", url: "https://res.cloudinary.com/cookson-personal-portfolio/image/upload/v1647978083/Portfolio%20Assets/Hobbies/IMG_0360_txknvq.jpg"},
+    {title: "Boating", url: "https://res.cloudinary.com/cookson-personal-portfolio/image/upload/v1647978085/Portfolio%20Assets/Hobbies/IMG_1622_tgnvkk.jpg"},
+    {title: "Hiking", url: "https://res.cloudinary.com/cookson-personal-portfolio/image/upload/v1647978085/Portfolio%20Assets/Hobbies/IMG_8878_ygewzn.jpg"},
+    {title: "Swimming", url: "https://res.cloudinary.com/cookson-personal-portfolio/image/upload/v1647978084/Portfolio%20Assets/Hobbies/IMG_1138_y8yfzo.jpg"}
   ]
   return(
     <>
+      <Header id="hobbies">Hobbies</Header>
       <Container>
-        <Header id="hobbies">Hobbies</Header>
-          <Style.HobbyWrapper>
-            <Style.Description>
-              <p>
-                I would consider myself a "jack of all trades, master of none." 
-                Some might say that I have too many hobbies and they might be right. 
-              </p>
-              <p>
-                But here's a few: 
-              </p>
-              <ListGroup>
-                <ListGroup.Item variant='dark'>Basketball</ListGroup.Item>
-                <ListGroup.Item variant='dark'>Skiing</ListGroup.Item>
-                <ListGroup.Item variant='dark'>Skateboarding</ListGroup.Item>
-                <ListGroup.Item variant='dark'>Video Games</ListGroup.Item>
-                <ListGroup.Item variant='dark'>D&D</ListGroup.Item>
-                <ListGroup.Item variant='dark'>Hiking & Camping</ListGroup.Item>
-                <ListGroup.Item variant='dark'>Boating & Swimming</ListGroup.Item>
-              </ListGroup>
-            </Style.Description>
-            <Style.CarouselWrapper>
-              <Carousel photos={photos}/>
-            </Style.CarouselWrapper>
-          </Style.HobbyWrapper>
+        <StyledCard>
+          <Card.Body>
+            <Card.Title>
+              My hobbies include skiing, playing basketball, video games, and a variety of outdoor activities.
+            </Card.Title>
+          </Card.Body>
+          <Carousel photos={photos}/>
+        </StyledCard>
       </Container>
     </>
   )

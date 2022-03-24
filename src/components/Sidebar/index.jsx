@@ -26,7 +26,6 @@ class Sidebar extends Component {
       sidebarOpen: true,
       width: 0,
       mobile: false,
-      socialPopout: false,
     };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
@@ -51,13 +50,8 @@ class Sidebar extends Component {
 
   toggleSidebar() {
     this.setState({ 
-      sidebarOpen: !this.state.sidebarOpen,
-      socialPopout: false
+      sidebarOpen: !this.state.sidebarOpen
      });
-  }
-
-  toggleSocialPopout() {
-    this.setState({ socialPopout: !this.state.socialPopout });
   }
 
   render() {
@@ -78,42 +72,39 @@ class Sidebar extends Component {
         }    
           </Style.MenuButton>
             <Style.LinkWrapper flexGrow={1}>
-                <HashLink to="/#home">
+                <HashLink to="/portfolio/#home">
                   <HouseFill />
                   <Style.Label sidebarOpen={this.state.sidebarOpen}>Home</Style.Label>
                 </HashLink>
-                <HashLink to="/#about">
+                <HashLink to="/portfolio/#about">
                   <FilePersonFill />
                   <Style.Label sidebarOpen={this.state.sidebarOpen}>About</Style.Label>
                 </HashLink>
-                <HashLink to="/#skills">
+                <HashLink to="/portfolio/#skills">
                   <FileCodeFill />
                   <Style.Label sidebarOpen={this.state.sidebarOpen}>Skills</Style.Label>
                 </HashLink>
-                <HashLink to="/#projects">
+                <HashLink to="/portfolio/#projects">
                   <FolderFill />
                   <Style.Label sidebarOpen={this.state.sidebarOpen}>Projects</Style.Label>
                 </HashLink>
-                <HashLink to="/#hobbies">
+                <HashLink to="/portfolio/#hobbies">
                   <ImageAlt />
                   <Style.Label sidebarOpen={this.state.sidebarOpen}>Hobbies</Style.Label>
                 </HashLink>
-                <Link to="/resume">
+                <Link to="/portfolio/resume">
                   <FileTextFill />
                   <Style.Label sidebarOpen={this.state.sidebarOpen}>My Resume</Style.Label>
                 </Link>
-                <Link to="/contact">
+                <Link to="/portfolio/contact">
                   <EnvelopeFill />
                   <Style.Label sidebarOpen={this.state.sidebarOpen}>Contact Me</Style.Label>
                 </Link>
                 { !this.state.sidebarOpen ? 
                 <>
-                  <Style.CollapsedSocial sidebarOpen={this.state.sidebarOpen} onClick={() => this.toggleSocialPopout()}>
+                  <Style.CollapsedSocial sidebarOpen={this.state.sidebarOpen} onClick={() => this.toggleSidebar()}>
                     <At/>
                   </Style.CollapsedSocial>
-                  <Style.Popout show={this.state.socialPopout}>
-                    <SocialLinks />
-                  </Style.Popout>
                 </>
                 :
                 <>

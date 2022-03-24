@@ -9,31 +9,31 @@ const Projects = () => {
     {
       title: 'DPL Hackathon Creator',
       link: 'https://hackathon-creator.herokuapp.com/',
-      imgsrc: 'https://images.unsplash.com/photo-1638029202288-451a89e0d55f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+      imgsrc: 'https://res.cloudinary.com/cookson-personal-portfolio/image/upload/v1647978562/Portfolio%20Assets/Projects/hackathon_ujjk84.jpg',
       description: 'Stack: React on Rails. A web app used for organizing and running Hackathon events for Devpoint Labs.'
     },
     {
       title: 'BOM Audit Tool',
       link: 'https://script.google.com/macros/s/AKfycbwjMFDZSWpO2-1Q7P60Su3YyH3msxvbl2wQcCQis7SJff3eFuYErfwOpmoCWyFQ3wyDSg/exec',
-      imgsrc: 'https://images.unsplash.com/photo-1624397640148-949b1732bb0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80',
+      imgsrc: 'https://res.cloudinary.com/cookson-personal-portfolio/image/upload/v1647978559/Portfolio%20Assets/Projects/solar_jsfhgi.jpg',
       description: 'Stack: Google Apps Script Web App. A tool used to audit planset equipment to ensure the correct equipmement is available.'
     },
     {
       title: 'D&E Design Tools',
       link: 'https://script.google.com/macros/s/AKfycbwttRmc6zANGKDuPM0quCLsaRyXIAiAjYWPI16fABeb-hHflG9vN1NerqiTXbOXKxdo/exec',
-      imgsrc: 'https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-      description: 'Stack: React on Google Apps Script. Currently in progress. Combining all of the individual Design and Enginnering tools into a single loaction.'
+      imgsrc: 'https://res.cloudinary.com/cookson-personal-portfolio/image/upload/v1647978560/Portfolio%20Assets/Projects/design_ri29lb.jpg',
+      description: 'Stack: React on Google Apps Script. Currently in progress. Combining all of the individual Design and Enginnering tools into a single location.'
     }
   ]
   return(
     <>
+      <Header id='projects'>Projects</Header>
       <Container>
-        <Header id='projects'>Projects</Header>
-        <Row sm={1} lg={3}>
+        <Row xs={1} sm={1} md={1} lg={3}>
           {projects.map((project, index) => {
             return (
               <Col key={index}>
-                <Card className="mb-3">
+                <Card className="m-3">
                   <Card.Img variant="top" src={project.imgsrc} />
                   <Card.Body>
                     <Card.Title>{project.title}</Card.Title>
@@ -58,7 +58,7 @@ const Projects = () => {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <Button className="mb-3">Check out more of my work on my GitHub!</Button>
+          <Button className="mb-3">See more on my GitHub!</Button>
 
         </a>
       </Container>
